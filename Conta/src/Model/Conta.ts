@@ -1,11 +1,12 @@
-export class Conta{
+export abstract class Conta {
+
     private _numero: number;
     private _agencia: number;
     private _tipo: number;
     private _titular: string;
     private _saldo: number;
 
-    constructor(numero: number, agencia: number, tipo: number, titular: string, saldo: number){
+    constructor(numero: number, agencia: number, tipo: number, titular: string, saldo: number) {
         this._numero = numero;
         this._agencia = agencia;
         this._tipo = tipo;
@@ -13,15 +14,15 @@ export class Conta{
         this._saldo = saldo;
     }
 
-    public get numero(){
+    public get numero() {
         return this._numero;
     }
 
-    public set numero(numero: number){
+    public set numero(numero: number) {
         this._numero = numero;
     }
 
-     public get agencia() {
+    public get agencia() {
         return this._agencia;
     }
 
@@ -91,4 +92,5 @@ export class Conta{
         console.log("Saldo: " + this._saldo.toFixed(2));
 
     }
+
 }
